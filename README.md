@@ -17,4 +17,5 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-![alt](https://assets/images/salad.jpg)
+<img src="screenshots/1.jpg" width="350"> <img src="screenshots/2.jpg" width="350">
+<img src="screenshots/3.jpg" width="350"> <img src="screenshots/4.jpg" width="350">
