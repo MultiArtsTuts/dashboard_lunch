@@ -1,6 +1,7 @@
 import 'package:dashboard_lunch/components/shadowed_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 
 import 'components/gradiente.cirular.progress.indicator.dart';
 import 'pages/salad.detail.page.dart';
@@ -11,6 +12,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.portraitUp,
+    ]);
+    
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
