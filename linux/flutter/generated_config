@@ -1,0 +1,6 @@
+# Generated code do not commit.
+export FLUTTER_ROOT=/home/joao/dev/flutter
+export BUILD=debug
+export TRACK_WIDGET_CREATION=true
+export FLUTTER_TARGET=lib/main.dart
+export PROJECT_DIR=/home/joao/flutter_projects/dashboard_lunch
