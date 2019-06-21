@@ -37,6 +37,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       backgroundColor: Color(0xFFF9F7FD),
       appBar: AppBar(
         title: Text('Dashboard', style: TextStyle(color: Colors.black, fontSize: 25, fontWeight: FontWeight.w400),),
@@ -540,33 +541,29 @@ class _HomePageState extends State<HomePage> {
         shape: CircularNotchedRectangle(),
         notchMargin: 5,
         elevation: 5,
-        child: BottomNavigationBar(          
-          type: BottomNavigationBarType.fixed,
-          items: [
-            BottomNavigationBarItem(
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            FlatButton.icon(
+              label: Text('Home'),
               icon: Icon(Icons.home),
-              title: Text('Home'),
+              onPressed: (){},
             ),
-            BottomNavigationBarItem(
+            IconButton(
               icon: Icon(Icons.search),
-              title: Text('Planner')
+              onPressed: (){},
             ),
-            BottomNavigationBarItem(
+            IconButton(
               icon: Icon(Icons.bookmark_border),
-              title: Text('Saved')
+              onPressed: (){},
             ),
-            BottomNavigationBarItem(
+            IconButton(
               icon: Icon(Icons.menu),
-              title: Text('Menu')
+              onPressed: (){},
             ),
           ],
-          
-          selectedItemColor: Colors.blueGrey,
-          showUnselectedLabels: true,
-          unselectedItemColor: Colors.grey,
-          currentIndex: 0,
-          onTap: (index) {},
-        ),
+        )
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
@@ -590,6 +587,37 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+
+
+
+/* BottomNavigationBar(          
+  type: BottomNavigationBarType.fixed,
+  items: [
+    BottomNavigationBarItem(
+      icon: Icon(Icons.home),
+      title: Text('Home'),
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.search),
+      title: Text('Planner')
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.bookmark_border),
+      title: Text('Saved')
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.menu),
+      title: Text('Menu')
+    ),
+  ],
+  
+  selectedItemColor: Colors.blueGrey,
+  showUnselectedLabels: true,
+  unselectedItemColor: Colors.grey,
+  currentIndex: 0,
+  onTap: (index) {},
+), */
+
 
   _listContent({String assetImg, String title, double rating}) {
     return Row(
